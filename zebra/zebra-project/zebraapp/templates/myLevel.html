@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">My Level<span class="sr-only">(current)</span></a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+</head>
+<body>
+        
+<h1>My Level 확인 페이지</h1>
+
+      <!-- Page Content -->
+  <div class="container">
+
+    <!-- Heading Row -->
+    <div class="row align-items-center my-5">
+      <div class="col-lg-7">
+        <img class="img-fluid rounded mb-4 mb-lg-0" src="images/Aurora, Canada 1920x1080.jpg" alt="">
+      </div>
+      <!-- /.col-lg-8 -->
+      <div class="col-lg-5">
+        <p>자연을 위해 한 노력</p>
+        <h1 class="font-weight-light">Level {{myItems.count}}</h1>
+        <br>
+        <a class="btn btn-primary" href="#">내가 산 제품 더 등록하기</a>
+      </div>
+      <!-- /.col-md-4 -->
+    </div>
+    <!-- /.row -->
+
+  </div>
+  <!-- /.container -->
+
+  {% if myItems.count == 5 %}
+  <p>당신의 화분에 씨앗을 심어보세요.</p>
+  {% endif %}
+
+
+    <section>
+        
+        {% for my_Items in myItems %}
+
+        <!-- timestamp 템플릿 사용한 부분 -->
+        <div class="container py-5">
+
+            <!-- For demo purpose -->
+            <div class="row text-center">
+                <div class="col-lg-8 mx-auto">
+                    </div>
+                </div><!-- End -->
+
+                <div class="row">
+                    <div class="col-lg-7 mx-auto">
+                        
+                        <!-- Timeline -->
+                        <ul class="timeline">
+                            <li class="timeline-item bg-white rounded ml-3 p-4 shadow">
+                                <div class="timeline-arrow"></div>
+                                <h2 class="h5 mb-0">{{my_Items.myItemName}}</h2>
+                                <span class="small text-gray"><i class="fa fa-clock-o mr-1"></i>{{my_Items.myItemStore}}</span>
+                                <span class="small text-gray"><i class="fa fa-clock-o mr-1"></i>{{my_Items.myItemDate}}</span>
+                                <span class="small text-gray"><i class="fa fa-clock-o mr-1"></i>{{my_Items.myItemCat}}</span>
+                                <span class="small text-gray"><i class="fa fa-clock-o mr-1"></i><a href="#">수정</a></span>
+                                <span class="small text-gray"><i class="fa fa-clock-o mr-1"></i><a href="#">삭제</a></span>
+                            </li>
+                        </ul><!-- End -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/ timestamp 템플릿 사용한 부분 -->
+        
+        {% endfor %}
+
+    </section>
+
+
+
+
+</body>
+
+</html>
