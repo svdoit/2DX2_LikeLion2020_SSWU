@@ -8,6 +8,9 @@ from .models import Tip
 def main(request):
     return render(request,'main.html')
 
+def login(request):
+    return render(request,'login.html')
+
 def myLevel(request):
     myItems_myLevel = MyItem.objects.all()
     return render(request, 'myLevel.html', {'myItems':myItems_myLevel})
