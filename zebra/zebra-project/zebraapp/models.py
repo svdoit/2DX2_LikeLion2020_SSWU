@@ -1,4 +1,6 @@
 from django.db import models
+from imagekit.models import ProcessedImageField
+from imagekit.processors import ResizeToFill
 
 # Create your models here.
 class MyItem(models.Model):
@@ -24,3 +26,18 @@ class Tip(models.Model):
 
     def __str__(self):
         return self.tipTitle
+
+class Item(models.Model):
+    itemName = models.CharField(max_length=200, null=True)
+    itemDetail = models.CharField(max_length=400, null=True)
+    itemPrice = models.CharField(max_length=20, null=True)
+    itemImg = ProcessedImageField(upload_to='images/', processors=[ResizeToFill(200, 200)], format='JPEG', options={'quality':80},)
+    itemStore = models.CharField(max_length=50, null=True)
+    itemLink = models.CharField(max_length=500, null=True)
+    itemShip = models.CharField(max_length=20, null=True)
+    itemCat = models.CharField(max_length=50, null=True)
+    # itemLiked = models.CharField(max_length=10)
+
+    def __str__(self):
+        return self.itemName + "-" + self.itemStore
+

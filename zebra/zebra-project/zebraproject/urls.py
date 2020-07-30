@@ -27,4 +27,6 @@ urlpatterns = [
     path('zebraapp/myLevel', views.myLevel, name="myLevel"),
     path('tip', views.tip, name= "tip"),
     path('tip/<int:tip_id>', views.tipDetail, name="tipDetail"),
+    path('product/', views.product, name="product"),
+    path('productDetail/', views.productDetail, name="productDetail"),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
