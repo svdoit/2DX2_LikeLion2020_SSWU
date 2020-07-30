@@ -15,10 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf import settings
+from django.conf.urls.static import static
 from zebraapp import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.main, name= "main"),
     path('zebraapp/myLevel', views.myLevel, name="myLevel"),
-]
+    path('tip', views.tip, name= "tip"),
+    path('tip/<int:tip_id>', views.tipDetail, name="tipDetail"),
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
