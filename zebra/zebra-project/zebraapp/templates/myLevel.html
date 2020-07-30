@@ -45,7 +45,7 @@
         <p>자연을 위해 한 노력</p>
         <h1 class="font-weight-light">Level {{myItems.count}}</h1>
         <br>
-        <a class="btn btn-primary" href="#">내가 산 제품 더 등록하기</a>
+        <a class="btn btn-primary" href="{% url 'submit_myItem' %}">내가 산 제품 더 등록하기</a>
       </div>
       <!-- /.col-md-4 -->
     </div>
@@ -83,8 +83,7 @@
                                 <span class="small text-gray"><i class="fa fa-clock-o mr-1"></i>{{my_Items.myItemStore}}</span>
                                 <span class="small text-gray"><i class="fa fa-clock-o mr-1"></i>{{my_Items.myItemDate}}</span>
                                 <span class="small text-gray"><i class="fa fa-clock-o mr-1"></i>{{my_Items.myItemCat}}</span>
-                                <span class="small text-gray"><i class="fa fa-clock-o mr-1"></i><a href="#">수정</a></span>
-                                <span class="small text-gray"><i class="fa fa-clock-o mr-1"></i><a href="#">삭제</a></span>
+                                <span class="small text-gray"><i class="fa fa-clock-o mr-1"></i><a href="{% url 'detail' my_Items.id %}">수정/삭제</a></span>
                             </li>
                         </ul><!-- End -->
 

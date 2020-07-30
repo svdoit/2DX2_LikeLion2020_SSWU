@@ -1,0 +1,7 @@
+<div class="timeline-arrow"></div>
+<h2 class="h5 mb-0">{{my_Items.myItemName}}</h2>
+<span class="small text-gray"><i class="fa fa-clock-o mr-1"></i>{{my_Items.myItemStore}}</span>
+<span class="small text-gray"><i class="fa fa-clock-o mr-1"></i>{{my_Items.myItemDate}}</span>
+<span class="small text-gray"><i class="fa fa-clock-o mr-1"></i>{{my_Items.myItemCat}}</span>
+<span class="small text-gray"><i class="fa fa-clock-o mr-1"></i><a href="{% url 'update' my_Items.id %}">수정</a></span>
+<span class="small text-gray"><i class="fa fa-clock-o mr-1"></i><a href="{% url 'delete' my_Items.id %}">삭제</a></span>
