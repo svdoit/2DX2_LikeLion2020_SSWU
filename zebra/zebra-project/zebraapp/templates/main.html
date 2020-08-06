@@ -17,7 +17,9 @@
 
   <!-- Custom styles for this template -->
   <link href="{% static 'zebraapp/css/modern-business.css' %}" type= "text/css" rel="stylesheet">
-
+<style>
+<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css"> .nanumsquare { font-family: 'NanumSquare', sans-serif !important; }
+</style>
 </head>
 
 <body>
@@ -32,16 +34,16 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="login">로그인</a>
+            <a class="nav-link" href="login" style ="'NanumSquare', sans-serif; font-size:15px;" >로그인</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="services.html">Services</a>
+            <a class="nav-link" href="services.html" style ="'NanumSquare', sans-serif; font-size:15px;"> Services</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="tip">팁</a>
+            <a class="nav-link" href="tip" style ="'NanumSquare', sans-serif; font-size:15px;">팁</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style ="'NanumSquare', sans-serif; font-size:15px;">
               Portfolio
             </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
@@ -53,7 +55,7 @@
             </div>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style ="'NanumSquare', sans-serif; font-size:15px;">
               Blog
             </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
@@ -63,7 +65,7 @@
             </div>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPages" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPages" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style ="'NanumSquare', sans-serif; font-size:15px;">
               Other Pages
             </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPages">
@@ -88,24 +90,24 @@
       </ol>
       <div class="carousel-inner" role="listbox">
         <!-- Slide One - Set the background image for this slide in the line below -->
-        <div class="carousel-item active" style="background-image: url('http://placehold.it/1900x1080')">
+        <div class="carousel-item active" style="background-image: url(static/img/main_soda.jpg)">
           <div class="carousel-caption d-none d-md-block">
-            <h3>First Slide</h3>
-            <p>This is a description for the first slide.</p>
+            <h3 class="h3 mb-3 font-weight-normal", style = "'NanumSquare', sans-serif; font-size:35px; color:#ffffff"><b>첫번째 슬라이드</b></h3>
+            <p style ="'NanumSquare', sans-serif; font-size:18px;">이런 저런 이야기를 적어보자</p>
           </div>
         </div>
         <!-- Slide Two - Set the background image for this slide in the line below -->
-        <div class="carousel-item" style="background-image: url('http://placehold.it/1900x1080')">
+        <div class="carousel-item" style="background-image: url(static/img/main_dental.jpg)">
           <div class="carousel-caption d-none d-md-block">
-            <h3>Second Slide</h3>
-            <p>This is a description for the second slide.</p>
+            <h3 class="h3 mb-3 font-weight-normal", style = "'NanumSquare', sans-serif; font-size:35px; color:#ffffff;"><b>두번째 슬라이드</b></h3>
+            <p style ="'NanumSquare', sans-serif; font-size:18px;">밖에 비가 너무 많이 와요</p>
           </div>
         </div>
         <!-- Slide Three - Set the background image for this slide in the line below -->
-        <div class="carousel-item" style="background-image: url('http://placehold.it/1900x1080')">
+        <div class="carousel-item" style="background-image: url(static/img/main_jar.jpg)">
           <div class="carousel-caption d-none d-md-block">
-            <h3>Third Slide</h3>
-            <p>This is a description for the third slide.</p>
+            <h3 class="h3 mb-3 font-weight-normal", style = "'NanumSquare', sans-serif; font-size:35px; color:#ffffff;"><b>세번째 슬라이드</b></h3>
+            <p style ="'NanumSquare', sans-serif; font-size:18px;">비가 주르륵주르륵 옵니다</p>
           </div>
         </div>
       </div>
@@ -119,60 +121,61 @@
       </a>
     </div>
   </header>
-
+  <br>
   <!-- Page Content -->
   <div class="container">
 
-    <h1 class="my-4">Welcome to Zero waste</h1>
-
+    <h1 class="my-4" style ="'NanumSquare', sans-serif;">제로웨이스트란?</h1>
+    <br>
     <!-- Marketing Icons Section -->
     <div class="row">
       <div class="col-lg-4 mb-4">
         <div class="card h-100">
-          <h4 class="card-header">Card Title</h4>
+          <h4 class="card-header" style ="'NanumSquare', sans-serif; font-size : 20px">첫번째 소개글</h4>
           <div class="card-body">
             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
           </div>
-          <div class="card-footer">
-            <a href="product" class="btn btn-primary">자세히 보기</a>
+          <div class="card-footer" >
+            <a href="product" class="btn btn-primary" style ="'NanumSquare', sans-serif;">자세히 보기</a>
           </div>
         </div>
       </div>
       <div class="col-lg-4 mb-4">
         <div class="card h-100">
-          <h4 class="card-header">Card Title</h4>
+          <h4 class="card-header" style ="'NanumSquare', sans-serif; font-size : 20px;">두번째 소개글</h4>
           <div class="card-body">
             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis ipsam eos, nam perspiciatis natus commodi similique totam consectetur praesentium molestiae atque exercitationem ut consequuntur, sed eveniet, magni nostrum sint fuga.</p>
           </div>
           <div class="card-footer">
-            <a href="#" class="btn btn-primary">Learn More</a>
+            <a href="#" class="btn btn-primary" style ="'NanumSquare', sans-serif;">자세히 보기</a>
           </div>
         </div>
       </div>
       <div class="col-lg-4 mb-4">
         <div class="card h-100">
-          <h4 class="card-header">Card Title</h4>
+          <h4 class="card-header" style ="'NanumSquare', sans-serif; font-size : 20px;">세번째 소개글</h4>
           <div class="card-body">
             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
           </div>
           <div class="card-footer">
-            <a href="#" class="btn btn-primary">Learn More</a>
+            <a href="#" class="btn btn-primary" style ="'NanumSquare', sans-serif;">자세히 보기</a>
           </div>
         </div>
       </div>
     </div>
     <!-- /.row -->
-
+    <br>
+    <br>
     <!-- Portfolio Section -->
-    <h2>Product</h2>
-
+    <h2 style ="'NanumSquare', sans-serif;"> Product</h2>
+    <br>
     <div class="row">
       <div class="col-lg-4 col-sm-6 portfolio-item">
         <div class="card h-100">
-          <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+          <a href="#"><img class="card-img-top" src="static/img/main_dental.jpg" width = "700" height = "250" alt=""></a>
           <div class="card-body">
             <h4 class="card-title">
-              <a href="#">Project One</a>
+              <a href="#" style ="'NanumSquare', sans-serif; font-size : 20px; color:#EBB48C;">대나무 칫솔</a>
             </h4>
             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur eum quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt, dolores in, nesciunt, illum tempora ex quae? Nihil, dolorem!</p>
           </div>
@@ -180,10 +183,10 @@
       </div>
       <div class="col-lg-4 col-sm-6 portfolio-item">
         <div class="card h-100">
-          <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+          <a href="#"><img class="card-img-top" src="static/img/main_jar.jpg" width = "700" height = "250" alt=""></a>
           <div class="card-body">
             <h4 class="card-title">
-              <a href="#">Project Two</a>
+              <a href="#" style ="'NanumSquare', sans-serif; font-size : 20px; color:#EBB48C;">친환경 빨대 </a>
             </h4>
             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
           </div>
@@ -191,10 +194,10 @@
       </div>
       <div class="col-lg-4 col-sm-6 portfolio-item">
         <div class="card h-100">
-          <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+          <a href="#"><img class="card-img-top" src="static/img/main_soda.jpg" width = "700" height = "250" alt=""></a>
           <div class="card-body">
             <h4 class="card-title">
-              <a href="#">Project Three</a>
+              <a href="#" style ="'NanumSquare', sans-serif; font-size : 20px; color:#EBB48C; ">프로듀스 백</a>
             </h4>
             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos quisquam, error quod sed cumque, odio distinctio velit nostrum temporibus necessitatibus et facere atque iure perspiciatis mollitia recusandae vero vel quam!</p>
           </div>
@@ -205,7 +208,7 @@
           <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
           <div class="card-body">
             <h4 class="card-title">
-              <a href="#">Project Four</a>
+              <a href="#" style ="'NanumSquare', sans-serif; font-size : 20px; color:#EBB48C; "> 유기농 설거지 비누</a>
             </h4>
             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
           </div>
@@ -216,7 +219,7 @@
           <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
           <div class="card-body">
             <h4 class="card-title">
-              <a href="#">Project Five</a>
+              <a href="#" style ="'NanumSquare', sans-serif; font-size : 20px; color:#EBB48C; ">유기농 행주</a>
             </h4>
             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
           </div>
@@ -227,7 +230,7 @@
           <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
           <div class="card-body">
             <h4 class="card-title">
-              <a href="#">Project Six</a>
+              <a href="#" style ="'NanumSquare', sans-serif; font-size : 20px; color:#EBB48C; ">재사용 화장솜</a>
             </h4>
             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque earum nostrum suscipit ducimus nihil provident, perferendis rem illo, voluptate atque, sit eius in voluptates, nemo repellat fugiat excepturi! Nemo, esse.</p>
           </div>
