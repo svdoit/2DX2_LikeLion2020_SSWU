@@ -221,9 +221,12 @@ table {
                   {% if myItems.count == 0 %}
                   <img class="levelImg" src="{% static 'img/seed.png' %}" width = "50" highth = "50" alt="">
                   <p>당신의 화분에 씨앗을 심어보세요.</p>
-          
-                  {% elif myItems.count > 5 %}
+                  
+                  {% elif myItems.count > 0 %}
                   <img class="levelImg" src="{% static 'img/gardening.png' %}" width = "50" highth = "50" alt="">
+
+                  {% elif myItems.count > 5 %}
+                  <img class="levelImg" src="{% static 'img/tree.png' %}" width = "50" highth = "50" alt="">
                   {% endif %}
                 </div>
             </div>
