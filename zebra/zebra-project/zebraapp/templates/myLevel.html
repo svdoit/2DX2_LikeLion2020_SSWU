@@ -9,55 +9,246 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">My Level<span class="sr-only">(current)</span></a>
-            </li>
-          </ul>
-          <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-          </form>
-        </div>
-      </nav>
+
+      <!-- reference your copy Font Awesome here (from our CDN or by hosting yourself) -->
+  <link href="/your-path-to-fontawesome/css/fontawesome.css" rel="stylesheet">
+  <link href="/your-path-to-fontawesome/css/brands.css" rel="stylesheet">
+  <link href="/your-path-to-fontawesome/css/solid.css" rel="stylesheet">
+
+  <style>
+  /* <!-- custom styling for all icons --> */
+  i.fas,
+  i.fab {
+    border: 1px solid red;
+  }
+
+  /* <!-- custom styling for specific icons --> */
+  .fa-fish {
+    color: salmon;
+  }
+
+  .fa-frog {
+    color: green;
+  }
+
+  .fa-user-ninja.vanished {
+    opacity: 0.0;
+  }
+
+  .fa-facebook {
+    color: rgb(59, 91, 152);
+  }
+
+  /*
+*
+* ==========================================
+* CUSTOM UTIL CLASSES
+* ==========================================
+*
+*/
+
+/* Timeline holder */
+ul.timeline {
+    list-style-type: none;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+ /* Timeline vertical line */
+ul.timeline::before {
+  content: ' ';
+    /* background: #fff; */
+    background: #000;
+    display: inline-block;
+    position: absolute;
+    left: 16px;
+    width: 4px;
+    height: 100%;
+    z-index: 400;
+    border-radius: 1rem;
+}
+
+    
+/* 
+li.timeline-item {
+    margin: 20px 0;
+} */
+
+/* Timeline item arrow */
+.timeline-arrow {
+    border-top: 0.5rem solid transparent;
+    border-right: 0.5rem solid #fff;
+    border-bottom: 0.5rem solid transparent;
+    display: block;
+    position: absolute;
+    left: 2rem;
+}
+
+/* Timeline item circle marker */
+li.timeline-item::before {
+    content: ' ';
+    background: #ddd;
+    display: inline-block;
+    position: absolute;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    left: 11px;
+    width: 14px;
+    height: 14px;
+    z-index: 400;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+
+/*
+*
+* ==========================================
+* FOR DEMO PURPOSES
+* ==========================================
+*
+*/
+/* body {
+    background: #E8CBC0;
+    background: -webkit-linear-gradient(to right, #E8CBC0, #636FA4);
+    background: linear-gradient(to right, #E8CBC0, #636FA4);
+    min-height: 100vh;
+} */
+
+.text-gray {
+    color: #999;
+}
+
+table {
+    width: 400px; 
+    background: #ffffff;
+    position: relative; 
+    margin: 50px auto;  
+    /* padding: 33px 25px 29px; */
+    text-align: center;
+}
+
+.td-1 {
+  width:100px;
+  background: #999;
+}
+
+.td-2 {
+  width:400px;
+  background: #e2b9b9
+}
+
+.myLevel_title {
+  text-align: center;
+  color: rgb(22, 175, 180);
+}
+
+.container-mylevel1 {
+  position: relative; 
+  margin: 50px auto;  
+  text-align: center;
+}
+
+.container-mylevel2 {
+  position: relative; 
+  margin: 50px auto;  
+  text-align: center;
+}
+
+</style>
+  
 </head>
 <body>
         
-<h1>My Level 확인 페이지</h1>
+  {% load static %} 
 
-      <!-- Page Content -->
-  <div class="container">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Zebra</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">My Level<span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <h1 class="myLevel_title">My Level</h1>
+
+  <div class="container-mylevel1">
 
     <!-- Heading Row -->
     <div class="row align-items-center my-5">
       <div class="col-lg-7">
-        <img class="img-fluid rounded mb-4 mb-lg-0" src="images/Aurora, Canada 1920x1080.jpg" alt="">
-      </div>
-      <!-- /.col-lg-8 -->
-      <div class="col-lg-5">
-        <p>자연을 위해 한 노력</p>
-        <h1 class="font-weight-light">Level {{myItems.count}}</h1>
-        <br>
-        <a class="btn btn-primary" href="{% url 'submit_myItem' %}">내가 산 제품 더 등록하기</a>
-      </div>
-      <!-- /.col-md-4 -->
-    </div>
-    <!-- /.row -->
+        {% if myItems.count == 0 %}
+        <img class="levelImg" src="{% static 'img/seed.png' %}" width = "80" highth = "80" alt="">
+        <p>당신의 화분에 씨앗을 심어보세요.</p>
 
+        {% elif myItems.count > 5 %}
+        <img class="levelImg" src="{% static 'img/gardening.png' %}" width = "80" highth = "80" alt="">
+        {% endif %}
+      </div>
   </div>
-  <!-- /.container -->
 
-  {% if myItems.count == 5 %}
-  <p>당신의 화분에 씨앗을 심어보세요.</p>
-  {% endif %}
+  <div class="container-mylevel2">
+    <!-- /.col-lg-8 -->
+    <div class="col-lg-5">
+      <p>자연을 위해 한 노력</p>
+      <h1 class="font-weight-light">Level {{myItems.count}}</h1>
+      <br>
+      <a class="btn btn-primary" href="{% url 'submit_myItem' %}">내가 산 제품 더 등록하기</a>
+    </div>
+    <!-- /.col-md-4 -->
+  </div>
+  <!-- /.row -->
 
+
+
+
+      <!-- Page Content -->
+      <table class="myLevel_table" >
+        <tr>
+          <td class="td-1">
+            <div class="container-td1">
+
+              <!-- Heading Row -->
+              <div class="row align-items-center my-5">
+                <div class="col-lg-7">
+                  {% if myItems.count == 0 %}
+                  <img class="levelImg" src="{% static 'img/seed.png' %}" width = "50" highth = "50" alt="">
+                  <p>당신의 화분에 씨앗을 심어보세요.</p>
+          
+                  {% elif myItems.count > 5 %}
+                  <img class="levelImg" src="{% static 'img/gardening.png' %}" width = "50" highth = "50" alt="">
+                  {% endif %}
+                </div>
+            </div>
+          </td>
+          
+          <td class="td-2">
+             <div class="container-td2">
+              <!-- /.col-lg-8 -->
+              <div class="col-lg-5">
+                <p>자연을 위해 한 노력</p>
+                <h1 class="font-weight-light">Level {{myItems.count}}</h1>
+                <br>
+                <a class="btn btn-primary" href="{% url 'submit_myItem' %}">내가 산 제품 더 등록하기</a>
+              </div>
+              <!-- /.col-md-4 -->
+            </div>
+            <!-- /.row -->
+        
+          </div>
+          <!-- /.container -->
+          </td>
+        </tr>
+      </table>
+ 
+  <a href="#" onclick="window.open('tip', 'width=300, height=300, menubar=no, status=no, toolbar=no');">팝업테스트</a>
 
     <section>
         
@@ -70,7 +261,8 @@
             <div class="row text-center">
                 <div class="col-lg-8 mx-auto">
                     </div>
-                </div><!-- End -->
+                </div>
+                <!-- End -->
 
                 <div class="row">
                     <div class="col-lg-7 mx-auto">
@@ -83,7 +275,12 @@
                                 <span class="small text-gray"><i class="fa fa-clock-o mr-1"></i>{{my_Items.myItemStore}}</span>
                                 <span class="small text-gray"><i class="fa fa-clock-o mr-1"></i>{{my_Items.myItemDate}}</span>
                                 <span class="small text-gray"><i class="fa fa-clock-o mr-1"></i>{{my_Items.myItemCat}}</span>
-                                <span class="small text-gray"><i class="fa fa-clock-o mr-1"></i><a href="{% url 'detail' my_Items.id %}">수정/삭제</a></span>
+                                <span class="small text-gray"><i class="fa fa-clock-o mr-1"></i>
+                                  <a href="{% url 'detail' my_Items.id %}">
+                                  <img src="{% static 'img/trash.png' %}" width = "10" highth = "10"  alt="">
+                                  <img src="{% static 'img/pen.png' %}" width = "10" highth = "10"  alt="">
+                                  </a>
+                                </span>
                             </li>
                         </ul><!-- End -->
 
@@ -95,7 +292,6 @@
         
         {% endfor %}
 
-    </section>
 
 
 
