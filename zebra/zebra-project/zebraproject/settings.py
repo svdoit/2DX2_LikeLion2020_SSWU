@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'zebraapp.apps.ZebraappConfig',
+    'account.apps.AccountConfig',
     'imagekit',
 
     #allauth
@@ -143,6 +144,9 @@ MEDIA_URL = '/media/'
 AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
     'allauth.account.auth_backends.AuthenticationBackend',
+    
+    'django.contrib.auth.backends.RemoteUserBackend',
+    'django.contrib.auth.backends.ModelBackend',
 )
 SITE_ID = 1
 LOGIN_REDIRECT_URL ='/'

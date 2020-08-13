@@ -18,11 +18,14 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 from zebraapp import views
+import account.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.main, name= "main"),
-    path('login/', views.login, name ="login"),
+    path('login/', account.views.login, name = 'login'),
+    path('signup/', account.views.signup, name = 'signup'),
+    path('logout/', account.views.logout, name ='logout'),
     path('accounts/', include('allauth.urls')),
     path('myLevel', views.myLevel, name="myLevel"),
     path('tip', views.tip, name= "tip"),

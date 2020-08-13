@@ -9,8 +9,6 @@ from .models import Item
 def main(request):
     return render(request,'main.html')
 
-def login(request):
-    return render(request,'login.html')
 
 def myLevel(request):
     myItems_myLevel = MyItem.objects.all()
