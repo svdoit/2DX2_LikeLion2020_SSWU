@@ -28,16 +28,66 @@ class Tip(models.Model):
         return self.tipTitle
 
 class Item(models.Model):
+    itemCat = models.CharField(max_length=20, null=True, primary_key=True)
+
     itemName = models.CharField(max_length=200, null=True)
     itemDetail = models.CharField(max_length=400, null=True)
     itemPrice = models.CharField(max_length=20, null=True)
-    itemImg = ProcessedImageField(upload_to='images/', processors=[ResizeToFill(200, 200)], format='JPEG', options={'quality':80},)
+    itemImg = ProcessedImageField(upload_to='images/', processors=[ResizeToFill(200, 200)], format='JPEG', options={'quality':80}, null=True)
     itemStore = models.CharField(max_length=50, null=True)
     itemLink = models.CharField(max_length=500, null=True)
     itemShip = models.CharField(max_length=20, null=True)
-    itemCat = models.CharField(max_length=50, null=True)
+    
+    itemName1 = models.CharField(max_length=200, null=True, blank=True)
+    itemDetail1 = models.CharField(max_length=400, null=True, blank=True)
+    itemPrice1 = models.CharField(max_length=20, null=True, blank=True)
+    itemImg1 = ProcessedImageField(upload_to='images/', processors=[ResizeToFill(200, 200)], format='JPEG', options={'quality':80}, null=True, blank=True)
+    itemStore1 = models.CharField(max_length=50, null=True, blank=True)
+    itemLink1 = models.CharField(max_length=500, null=True, blank=True)
+    itemShip1 = models.CharField(max_length=20, null=True, blank=True)
+
+    itemName2 = models.CharField(max_length=200, null=True, blank=True)
+    itemDetail2 = models.CharField(max_length=400, null=True, blank=True)
+    itemPrice2 = models.CharField(max_length=20, null=True, blank=True)
+    itemImg2 = ProcessedImageField(upload_to='images/', processors=[ResizeToFill(200, 200)], format='JPEG', options={'quality':80}, null=True, blank=True)
+    itemStore2 = models.CharField(max_length=50, null=True, blank=True)
+    itemLink2 = models.CharField(max_length=500, null=True, blank=True)
+    itemShip2 = models.CharField(max_length=20, null=True, blank=True)
+
+    itemName3 = models.CharField(max_length=200, null=True, blank=True)
+    itemDetail3 = models.CharField(max_length=400, null=True, blank=True)
+    itemPrice3 = models.CharField(max_length=20, null=True, blank=True)
+    itemImg3 = ProcessedImageField(upload_to='images/', processors=[ResizeToFill(200, 200)], format='JPEG', options={'quality':80}, null=True, blank=True)
+    itemStore3 = models.CharField(max_length=50, null=True, blank=True)
+    itemLink3 = models.CharField(max_length=500, null=True, blank=True)
+    itemShip3 = models.CharField(max_length=20, null=True, blank=True)
+
+    itemName4 = models.CharField(max_length=200, null=True, blank=True)
+    itemDetail4 = models.CharField(max_length=400, null=True, blank=True)
+    itemPrice4 = models.CharField(max_length=20, null=True, blank=True)
+    itemImg4 = ProcessedImageField(upload_to='images/', processors=[ResizeToFill(200, 200)], format='JPEG', options={'quality':80}, null=True, blank=True)
+    itemStore4 = models.CharField(max_length=50, null=True, blank=True)
+    itemLink4 = models.CharField(max_length=500, null=True, blank=True)
+    itemShip4 = models.CharField(max_length=20, null=True, blank=True)
+
+    itemName5 = models.CharField(max_length=200, null=True, blank=True)
+    itemDetail5 = models.CharField(max_length=400, null=True, blank=True)
+    itemPrice5 = models.CharField(max_length=20, null=True, blank=True)
+    itemImg5 = ProcessedImageField(upload_to='images/', processors=[ResizeToFill(200, 200)], format='JPEG', options={'quality':80}, null=True, blank=True)
+    itemStore5 = models.CharField(max_length=50, null=True, blank=True)
+    itemLink5 = models.CharField(max_length=500, null=True, blank=True)
+    itemShip5 = models.CharField(max_length=20, null=True, blank=True)
+
+
+    # CATEGORY = (
+    #     ('0', 'Bathroom'),
+    #     ('1', 'Kitchen'),
+    #     ('2', 'Living'),
+    #     ('3', 'Office'),
+    # )
+    # itemCat = models.CharField(max_length=50, null=True, choices=CATEGORY)
     # itemLiked = models.CharField(max_length=10)
 
     def __str__(self):
-        return self.itemName + "-" + self.itemStore
+        return self.itemCat
 
