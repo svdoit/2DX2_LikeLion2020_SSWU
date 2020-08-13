@@ -66,4 +66,7 @@ def productDetail(request):
     productDetails = Item.objects.all()
     return render(request, 'productDetail.html',{'productDetails':productDetails})
 
+def bathroom(request):
+    return render(request, 'bathroom.html')
+
 

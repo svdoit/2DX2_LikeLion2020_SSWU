@@ -104,7 +104,7 @@
           </ol>
           <div class="carousel-inner" role="listbox">
             <div class="carousel-item active">
-              <img class="d-block img-fluid" src="OrganicSoapBerries.jpg" width="900" height="10" alt="First slide">
+              <img class="d-block img-fluid" src="{% static 'zebraapp/OrganicSoapBerries.jpg' %}" width="900" height="350" alt="First slide">
             </div>
             <div class="carousel-item">
               <img class="d-block img-fluid" src="http://placehold.it/900x350" alt="Second slide">
@@ -128,36 +128,109 @@
         {% comment %} 리스트 부분 {% endcomment %}
         {%for productDetail in productDetails.all %}
         <div class="content">
-             <img src="{{productDetail.itemImg.url}}">
+
+            <img src="{{productDetail.itemImg.url}}">
             <div class="description">
-                <a href="http://www.freshbubble.kr/goods/goods_view.php?goodsNo=1000000016&inflow=naver&NaPm=ct=kcnk0gq8|ci=d6e54c092fd38621c2c15fa5989f71da06a8c5c4|tr=sls|sn=788747|hk=caed5435a8ee6acf541f1c4fa0f5fa0777d6643d">{{productDetail.itemName}}</a>
+                <a href="{{productDetail.itemLink}}">{{productDetail.itemName}}</a>
                 <br>
+                <h5> {{productDetail.itemStore}} </h5>
+                <h6> {{productDetail.itemDetail}} </h6>
                 <p>
                     정가: {{productDetail.itemPrice}} <br>
-                    배송비: 2,500원
+                    배송비: {{productDetail.itemShip}}}<br>
                 </p>
             </div>
+            <div style="clear: both"></div>
+            <hr>
+            
+            {% if productDetails.itemName2 != "none" %}
+            <img src="{{productDetail.itemImg1.url}}">
+            <div class="description">
+                <a href="{{productDetail.itemLink1}}">{{productDetail.itemName1}}</a>
+                <br>
+                <h5> {{productDetail.itemStore1}} </h5>
+                <h6> {{productDetail.itemDetail1}} </h6>
+                <p>
+                    정가: {{productDetail.itemPrice1}} <br>
+                    배송비: {{productDetail.itemShip1}}}<br>
+                </p>
+            </div>
+            <div style="clear: both"></div>
+            <hr>
+           {% endif %}
+
+
+            {% if productDetails.itemName2 != "none" %}
+              <img src="{{productDetail.itemImg2.url}}">
+              <div class="description">
+                  <a href="{{productDetail.itemLink2}}">{{productDetail.itemName2}}</a>
+                  <br>
+                  <h5> {{productDetail.itemStore2}} </h5>
+                  <h6> {{productDetail.itemDetail2}} </h6>
+                  <p>
+                      정가: {{productDetail.itemPrice2}} <br>
+                      배송비: {{productDetail.itemShip2}}}<br>
+                  </p>
+              </div>
+              <div style="clear: both"></div>
+              <hr>
+            {% endif %}
+
+
+            {% if productDetails.itemName1 != none %}
+            <img src="{{productDetail.itemImg3.url}}">
+            <div class="description">
+                <a href="{{productDetail.itemLink3}}">{{productDetail.itemName3}}</a>
+                <br>
+                <h5> {{productDetail.itemStore3}} </h5>
+                <h6> {{productDetail.itemDetail3}} </h6>
+                <p>
+                    정가: {{productDetail.itemPrice3}} <br>
+                    배송비: {{productDetail.itemShip3}}}<br>
+                </p>
+            </div>
+            <div style="clear: both"></div>
+            <hr>
+            {% endif %}
+
+            {% if productDetails.itemName1 != none %}
+            <img src="{{productDetail.itemImg4.url}}">
+            <div class="description">
+                <a href="{{productDetail.itemLink4}}">{{productDetail.itemName4}}</a>
+                <br>
+                <h5> {{productDetail.itemStore4}} </h5>
+                <h6> {{productDetail.itemDetail4}} </h6>
+                <p>
+                    정가: {{productDetail.itemPrice4}} <br>
+                    배송비: {{productDetail.itemShip4}}}<br>
+                </p>
+            </div>
+            <div style="clear: both"></div>
+            <hr>
+            {% endif %}
+
+            {% if productDetails.itemName5 != none %}
+            <img src="{{productDetail.itemImg5.url}}">
+            <div class="description">
+                <a href="{{productDetail.itemLink5}}">{{productDetail.itemName5}}</a>
+                <br>
+                <h5> {{productDetail.itemStore5}} </h5>
+                <h6> {{productDetail.itemDetail5}} </h6>
+                <p>
+                    정가: {{productDetail.itemPrice5}} <br>
+                    배송비: {{productDetail.itemShip5}}}<br>
+                </p>
+            </div>
+            <div style="clear: both"></div>
+            <hr>
+            {% endif %}
+
         </div>
         {%endfor%}
         
         <div style="clear: both"></div>
         <hr>
 
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-              <div class="card-body">
-                <h4 class="card-title">
-                  <a href="#">Item Six</a>
-                </h4>
-                <h5>$24.99</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
-              </div>
-              <div class="card-footer">
-                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-              </div>
-            </div>
-          </div>
 
         </div>
         <!-- /.row -->

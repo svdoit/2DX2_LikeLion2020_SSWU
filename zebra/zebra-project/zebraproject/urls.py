@@ -37,4 +37,5 @@ urlpatterns = [
     path('myLevel/<int:my_Items_id>', views.detail_myItem, name="detail"),
     path('myLevel/<int:my_Items_id>/update', views.update_myItem, name="update"),
     path('myLevel/<int:my_Items_id>/delete', views.delete_myItem, name="delete"),
+    path('bathroom/', views.bathroom, name="bathroom"),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
