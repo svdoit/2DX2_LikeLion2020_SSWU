@@ -30,21 +30,20 @@
 
     <img src="{% static 'img/tip.jpg' %}" class="img-fluid" alt="Responsive image">
 
-        <div class="container">
-
         <br>
         <br>
 
         <!-- Post Content Column -->
         
-            <div class="row row-cols-md-4">
+
+            <div class="wrapper">
 
                     {% for tip in tips %}
 
                         <article class="location-listing">
 
                         <a class="location-title" href="{% url 'tipDetail' tip.id %}">{{tip.tipTitle}}</a>
-                        <div class="thumbnail-wrappper">
+                        <div class="thumbnail-wrapper">
                             <div class="thumbnail">
                             <div class="centered">
                             <img src="{{ tip.tipImg.url }}" class="landscape"></a>
@@ -56,9 +55,9 @@
 
                     {% endfor %}
             </div>
+            </div>
                     <!-- end grid container -->
 
-        </div>
 
 <footer class="blog-footer">
   <p>Zero Waste Platform</p>
