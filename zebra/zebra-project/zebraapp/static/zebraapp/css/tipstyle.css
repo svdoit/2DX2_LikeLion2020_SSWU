@@ -11,16 +11,28 @@ body {
   
 }
 
+.wrapper {
+  padding-bottom: 2.5em;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(250px, 1fr, 1fr));
+  justify-items: center;
+  position: relative;
+  padding-left: 14em;
+  padding-right: 14em; 
+}
+
   /* hover styles */
-.location-listing {
+.location-listing { 
   position: relative;
 }
   
-.thumbnail-wrappper {
+.thumbnail-wrapper {
   overflow: hidden;
   float: left;
   width: 250px; /* need to overwrite inline dimensions */
-  margin-bottom: 40px;
+
 }
 
 .thumbnail {
@@ -54,7 +66,6 @@ body {
   -webkit-transform: translate(-50%,-50%);
   -ms-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
-  
 }
  
 .location-title {
@@ -70,8 +81,7 @@ body {
   opacity: 0;
   transition: opacity .5s;
   background: rgba(0, 0, 0, 0.3);
-  color: white;
-    
+  color: white;   
   /* position the text in t’ middle*/
   display: flex;
   align-items: center;
@@ -103,4 +113,3 @@ body {
     filter: blur(2px);
   }
 }
-
