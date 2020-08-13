@@ -5,7 +5,8 @@
   
     <!-- CSS only -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link href="{% static 'zebraapp/css/myLevelstyle.css' %}" type="text/css" rel="stylesheet">
+    <link href="{% static 'zebraapp/css/tipstyle.css' %}" type="text/css" rel="stylesheet">
+
     <!-- JS, Popper.js, and jQuery -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
@@ -17,6 +18,146 @@
   <link href="/your-path-to-fontawesome/css/brands.css" rel="stylesheet">
   <link href="/your-path-to-fontawesome/css/solid.css" rel="stylesheet">
 
+  <style>
+  /* <!-- custom styling for all icons --> */
+  i.fas,
+  i.fab {
+    border: 1px solid red;
+  }
+
+  /* <!-- custom styling for specific icons --> */
+  .fa-fish {
+    color: salmon;
+  }
+
+  .fa-frog {
+    color: green;
+  }
+
+  .fa-user-ninja.vanished {
+    opacity: 0.0;
+  }
+
+  .fa-facebook {
+    color: rgb(59, 91, 152);
+  }
+
+  /*
+*
+* ==========================================
+* CUSTOM UTIL CLASSES
+* ==========================================
+*
+*/
+
+/* Timeline holder */
+ul.timeline {
+    list-style-type: none;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+ /* Timeline vertical line */
+ul.timeline::before {
+  content: ' ';
+    /* background: #fff; */
+    background: #000;
+    display: inline-block;
+    position: absolute;
+    left: 16px;
+    width: 4px;
+    height: 100%;
+    z-index: 400;
+    border-radius: 1rem;
+}
+
+    
+/* 
+li.timeline-item {
+    margin: 20px 0;
+} */
+
+/* Timeline item arrow */
+.timeline-arrow {
+    border-top: 0.5rem solid transparent;
+    border-right: 0.5rem solid #fff;
+    border-bottom: 0.5rem solid transparent;
+    display: block;
+    position: absolute;
+    left: 2rem;
+}
+
+/* Timeline item circle marker */
+li.timeline-item::before {
+    content: ' ';
+    background: #ddd;
+    display: inline-block;
+    position: absolute;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    left: 11px;
+    width: 14px;
+    height: 14px;
+    z-index: 400;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+
+/*
+*
+* ==========================================
+* FOR DEMO PURPOSES
+* ==========================================
+*
+*/
+/* body {
+    background: #E8CBC0;
+    background: -webkit-linear-gradient(to right, #E8CBC0, #636FA4);
+    background: linear-gradient(to right, #E8CBC0, #636FA4);
+    min-height: 100vh;
+} */
+
+.text-gray {
+    color: #999;
+}
+
+table {
+    width: 400px; 
+    background: #ffffff;
+    position: relative; 
+    margin: 50px auto;  
+    /* padding: 33px 25px 29px; */
+    text-align: center;
+}
+
+.td-1 {
+  width:100px;
+  background: #999;
+}
+
+.td-2 {
+  width:400px;
+  background: #e2b9b9
+}
+
+.myLevel_title {
+  text-align: center;
+  color: rgb(22, 175, 180);
+}
+
+.container-mylevel1 {
+  position: relative; 
+  margin: 50px auto;  
+  text-align: center;
+}
+
+.container-mylevel2 {
+  position: relative; 
+  margin: 50px auto;  
+  text-align: center;
+}
+
+</style>
   
 </head>
 <body>
