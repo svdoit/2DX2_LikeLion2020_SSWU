@@ -28,7 +28,7 @@ class Tip(models.Model):
         return self.tipTitle
 
 class Item(models.Model):
-    itemCat = models.CharField(max_length=20, null=True, primary_key=True)
+    itemCat = models.CharField(max_length=20, null=True)
 
     itemName = models.CharField(max_length=200, null=True)
     itemDetail = models.CharField(max_length=400, null=True)
